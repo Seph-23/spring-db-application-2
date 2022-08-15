@@ -32,7 +32,7 @@ public class MemoryItemRepository implements ItemRepository {
     }
 
     @Override
-    public Optional<Item> findById(Long id) {
+    public Optional<Item> findById(Long id) {       //Optional = 아이템이 있을수도 있고 없을수도 있다. 한번 감싸준것. 자바 8 문법.
         return Optional.ofNullable(store.get(id));
     }
 
